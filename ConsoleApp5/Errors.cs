@@ -1,13 +1,14 @@
-﻿namespace Компилятор
+using System.Collections.Generic;
+
+namespace Компилятор
 {
     public static class Errors
     {
-        private static Dictionary<byte, string> errors;
+        private static Dictionary<byte, string> errors =
+            new Dictionary<byte, string>();
 
         static Errors()
         {
-            errors = 
-                new Dictionary<byte, string>();
             errors[1] = "Недопустимый символ";
             errors[2] = "Ожидался идентификатор";
             errors[3] = "Ожидалось ';'";
